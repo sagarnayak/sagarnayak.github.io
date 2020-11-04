@@ -75,7 +75,7 @@
         </div>
         <p class="lead mb-5">I work on the android platform to create applications to solve customer problems. I
           love to push my boundaries and learn new things every day.</p>
-        <p class="lead mb-5">Total experience - 5 years</p>
+        <p id="total_years_exp" class="lead mb-5">Total experience - 5 years</p>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/sagarnayak/" target="_blank">
             <i class="fab fa-linkedin-in"></i>
@@ -491,6 +491,15 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/resume.min.js"></script>
+
+  <script>
+    var diff = new Date()- new Date('1-5-2016')
+    var age = new Date(new Date("0000-01-01").getTime()+diff)
+    var years = age.getFullYear()
+    var months = age.getMonth()
+    var days = age.getDate()
+    document.getElementById("total_years_exp").innerHTML = "Total experience - "+ years + " years" + months + " months"
+  </script>
 
 </body>
 
